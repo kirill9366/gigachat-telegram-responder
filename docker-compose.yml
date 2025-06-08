@@ -1,0 +1,7 @@
+services:
+  bot:
+    build:
+      context: ./project
+    restart: unless-stopped
+    volumes:
+      - ./:/usr/src
