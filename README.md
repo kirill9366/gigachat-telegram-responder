@@ -1,6 +1,6 @@
 # Telegram-GigaChat Bot
 
-Лёгкий способ запустить Telegram-бота на базе GigaChat с помощью Docker Compose.
+Лёгкий способ запустить "Telegram-бота для ответов на комментарии в канале" на базе GigaChat с помощью Docker Compose.
 
 ## 1. Предварительные требования
 
