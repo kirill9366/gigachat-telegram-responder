@@ -5,3 +5,5 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/usr/src
+    env_file:
+      - ./.env

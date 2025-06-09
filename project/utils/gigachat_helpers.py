@@ -12,6 +12,8 @@ from typing import List, Union
 
 from langchain.schema import Document
 
+from settings import USE_VERIFY_SSL_CERT
+
 
 def is_question(gigachat_client: GigaChat, text: str) -> bool | None:
     if "?" in text:
@@ -129,7 +131,7 @@ def prepare_kb_vector_store(
 ) -> Qdrant:
     # 1. Embedding model (lazy - no request yet)
     embeddings = GigaChatEmbeddings(access_token=gigachat_token)
-    embeddings.verify_ssl_certs = False
+    embeddings.verify_ssl_certs = USE_VERIFY_SSL_CERT
 
     # 2. Qdrant client (local RAM | local disk | remote)
     client = QdrantClient(path=qdrant_location)
